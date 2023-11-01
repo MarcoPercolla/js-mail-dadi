@@ -5,6 +5,7 @@ const dadiBtn = document.getElementById("lancia") ;
 const checkBtn = document.getElementById("getMail");
 const primoDado = document.getElementById("mioDado");
 const secondoDado = document.getElementById("againstDado");
+const result = document.getElementById("result");
 
 
 
@@ -34,7 +35,15 @@ dadiBtn.addEventListener("click" , function() {
     primoDado.innerHTML = Math.floor(Math.random() * 6);
     secondoDado.innerHTML = Math.floor(Math.random() * 6);
 
-    
+    if (primoDado.innerHTML == secondoDado.innerHTML){
+        result.innerHTML = `Pari`
+
+    }else if (primoDado.innerHTML < secondoDado.innerHTML){
+        result.innerHTML = `Hai perso`
+
+    }else if (primoDado.innerHTML > secondoDado.innerHTML){
+        result.innerHTML = `hai vinto`
+    }
 })
 
 
