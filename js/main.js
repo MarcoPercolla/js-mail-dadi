@@ -1,4 +1,4 @@
-const autorized = [ "percollamarco8@gmail.com", "redmallardai@gmail.com", "percollamarco@virgilio.it" , "a"];
+const autorized = [ "percollamarco8@gmail.com", "redmallardai@gmail.com", "percollamarco@virgilio.it" , "a@"];
 const welcomeMessage = document.getElementById("container");
 const autorizedZone = document.getElementById("passValid")
 const dadiBtn = document.getElementById("lancia") ;
@@ -13,22 +13,29 @@ const loginZone = document.getElementById("loginZone")
 checkBtn.addEventListener( "click" , function() {
     const mailCheck = document.getElementById("mailInput").value ;
     console.log(mailCheck)
+    if (mailCheck != "" && !(mailCheck.includes("@") == false)) {
 
-    for (let i = 0; i < autorized.length; i++) {
-        const mailAutorized = autorized[i];
-        
-        if (mailAutorized == mailCheck) {
-            welcomeMessage.innerHTML = ` benvenuto :  ${mailCheck} `;
-            autorizedZone.classList.remove("d-none");
-            loginZone.classList.add("d-none");
+        for (let i = 0; i < autorized.length; i++) {
+            const mailAutorized = autorized[i];
             
-            break;
+            if (mailAutorized == mailCheck) {
+                welcomeMessage.innerHTML = ` benvenuto :  ${mailCheck} `;
+                autorizedZone.classList.remove("d-none");
+                loginZone.classList.add("d-none");
+                
+                break;
+                
+            }else  {
+                welcomeMessage.innerHTML = ` non puoi accedere :  ${mailCheck} `;
+            }
             
-        }else  {
-            welcomeMessage.innerHTML = ` non puoi accedere :  ${mailCheck} `;
         }
         
+    }else {
+        welcomeMessage.innerHTML = `invalid mail`
     }
+
+    
 });
 
 
