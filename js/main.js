@@ -33,16 +33,18 @@ checkBtn.addEventListener( "click" , function() {
 
 
 dadiBtn.addEventListener("click" , function() {
-    primoDado.innerHTML = Math.floor(Math.random() * 6);
-    secondoDado.innerHTML = Math.floor(Math.random() * 6);
+    let primoNumero = Math.floor(Math.random() * 6)
+    let secondoNumero = Math.floor(Math.random() * 6)
+    primoDado.innerHTML = `il tuo dado vale: ${primoNumero} `;
+    secondoDado.innerHTML =`il dado avversario vale: ${secondoNumero} `;
 
-    if (primoDado.innerHTML == secondoDado.innerHTML){
+    if (primoNumero == secondoNumero){
         result.innerHTML = `Pari`
 
-    }else if (primoDado.innerHTML < secondoDado.innerHTML){
+    }else if (primoNumero < secondoNumero){
         result.innerHTML = `Hai perso`
 
-    }else if (primoDado.innerHTML > secondoDado.innerHTML){
+    }else if (primoNumero > secondoNumero){
         result.innerHTML = `hai vinto`
     }
 })
