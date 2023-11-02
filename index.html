@@ -14,17 +14,27 @@
 </head>
 
 <body>
-    <div id="loginZone" >
-    <h1>inserire mail</h1>
-    <input type="mail" id="mailInput" placeholder="...@gmail.com">
-    <button id="getMail">Check</button>
+    <div id="loginZone">
+        <h1>Esegui il login e partecipa alla nostra bisca!</h1>
+        <input type="mail" id="mailInput" placeholder="...@gmail.com">
+        <button id="getMail">Entra</button>
 
-    <div id="container"></div>
+        <div id="container" class="red my-2"></div>
     </div>
-    <div id="passValid" class="d-none" >
-        <button id="lancia">lancia</button>
-        <div id="mioDado"></div>
-        <div id="againstDado"></div>
+    <div id="container2" class="green my-2"></div>
+    <div id="passValid" class="d-none">
+        <button id="lancia">lancia il dado</button>
+        <div class="d-flex justify-content-around">
+            <div>
+                <div id="mioDado" class="m-auto my-2"></div>
+                <div id="dado1" class="m-auto dado d-flex align-items-center justify-content-center"></div>
+            </div>    
+            <div>
+                <div id="againstDado" class="m-auto my-2"></div>
+                <div id="dado2" class="m-auto dado d-flex align-items-center justify-content-center"></div>
+            </div>
+
+        </div>
         <div id="result"></div>
 
     </div>

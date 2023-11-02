@@ -11,3 +11,27 @@ body {
     padding: 1rem;
     text-align: center;
 }
+
+.dado{
+    width: 4rem;
+    aspect-ratio: 1 / 1;
+    background-color: bisque;
+    border-radius: 1rem;
+    color: black;
+}
+
+.green {
+    color: green;
+    font-size: 3rem;
+}
+
+.red {
+    color: red;
+    font-size: 3rem;
+}
+
+.orange{
+    color: orange;
+    font-size: 3rem;
+}
+
