@@ -59,8 +59,8 @@ checkBtn.addEventListener("click", function () {
 
 
 dadiBtn.addEventListener("click", function () {
-    let primoNumero = Math.floor(Math.random() * 6)
-    let secondoNumero = Math.floor(Math.random() * 6)
+    let primoNumero = Math.ceil(Math.random() * 6)
+    let secondoNumero = Math.ceil(Math.random() * 6)
     primoDado.innerHTML = `il tuo dado vale:  `;
     dadoImg1.innerHTML = `${primoNumero}`
     secondoDado.innerHTML = `il dado avversario vale:  `;
