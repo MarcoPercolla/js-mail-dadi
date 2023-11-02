@@ -6,7 +6,7 @@ const checkBtn = document.getElementById("getMail");
 const primoDado = document.getElementById("mioDado");
 const secondoDado = document.getElementById("againstDado");
 const result = document.getElementById("result");
-
+const loginZone = document.getElementById("loginZone")
 
 
 
@@ -20,6 +20,7 @@ checkBtn.addEventListener( "click" , function() {
         if (mailAutorized == mailCheck) {
             welcomeMessage.innerHTML = ` benvenuto :  ${mailCheck} `;
             autorizedZone.classList.remove("d-none");
+            loginZone.classList.add("d-none");
             
             break;
             
